@@ -4,16 +4,7 @@
 
 <aside>
     <section>
-            {% if SOCIAL %}
-            <h4><i class="fa fa-home fa-lg"></i>Social</h4>
-            <ul class="list-group list-group-flush">
-                {% for name, link in SOCIAL %}
-                    <li class="list-group-item"><a href="{{ link }}"><i
-                            class="fa fa-{{ name|lower|replace('+','-plus') }}-square fa-lg"></i>{{ name }}
-                    </a></li>
-                {% endfor %}
-            </ul>
-            {% endif %}
+            {% include 'includes/social.html' %}
 
             {% if DISPLAY_RECENT_POSTS_ON_SIDEBAR %}
                 {% if RECENT_POST_COUNT is not defined %}
@@ -47,7 +38,6 @@
             {% include 'includes/tagcloud.html' %}
             {% include 'includes/github.html' %}
             {% include 'includes/links.html' %}
-
     </section>
 
 </aside>

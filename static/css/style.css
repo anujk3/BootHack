@@ -34,7 +34,7 @@ body {
     font-size: 10pt;
 }
 
-.tagcloud {
+.social-side, .tagcloud {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 20px;
