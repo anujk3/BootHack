@@ -33,9 +33,9 @@ This theme honors the following standard Pelican settings:
 
 It uses the `tag_cloud` variable for displaying tags in the sidebar. You can control the amount of tags shown with: `TAG_CLOUD_MAX_ITEMS`
 
-## Extras
+## Features
 
-For extra features, take a look [here](FEATURES.md)
+For a list of features, take a look [here](FEATURES.md).
 
 ## Live example
 
