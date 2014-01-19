@@ -1,0 +1,23 @@
+{% if DISPLAY_TAGS_ON_SIDEBAR %}
+    <li class="list-group-item"><a href="{{ SITEURL }}/{{ TAGS_URL }}"><h4><i class="fa fa-tags fa-lg"></i>Tags</h4></a></li>
+    {% if TAGCLOUD_INLINE %}
+        <div class="tagcloud">
+        {% for tag in tag_cloud|sort(attribute='0') %}
+            <a class="tag-{{ tag.1 }}" href="{{ SITEURL }}/{{ tag.0.url }}">
+                {{ tag.0|lower }}
+            </a>
+        {% endfor %}
+    </div>
+    {% else %}
+        <ul class="list-group list-group-flush {% if TAGCLOUD_INLINE %}list-inline{% endif %}">
+        {% for tag in tag_cloud|sort(attribute='1') %}
+            <li class="list-group-item tag-{{ tag.1 }}">
+                <a href="{{ SITEURL }}/{{ tag.0.url }}">
+                    {{ tag.0|lower }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endif %}
+
