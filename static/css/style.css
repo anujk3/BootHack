@@ -40,6 +40,13 @@ body {
     margin-bottom: 20px;
 }
 
+#sidebar-brand {
+    text-align: center;
+}
+#sidebar-content {
+    text-align: right;
+}
+
 #sidebar {
     padding: 10px;
 }
