@@ -50,6 +50,10 @@ a, a:hover {
     color: inherit;
 }
 
+p a, p a:hover {
+    color: #3498DB;
+}
+
 .entry-content a {
     text-decoration: none;
     border-bottom: 1px dotted;
