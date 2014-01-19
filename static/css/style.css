@@ -36,11 +36,12 @@ body {
 
 .tagcloud {
     margin-left: 15px;
-    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
 }
 
 #sidebar {
-    padding-top: 0px;
+    padding: 10px;
 }
 
 #sidebar a {
