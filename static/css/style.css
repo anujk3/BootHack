@@ -1,3 +1,7 @@
+.navbar {
+    border-top: 3px solid #333333;
+}
+
 body {
     padding-top: 70px;
 }
@@ -21,8 +25,7 @@ body {
 
 /* Sidebar styling */
 #sidebar {
-    padding: 10px;
-    margin-top: 44px;
+    padding: 0px 10px;
 }
 
 #sidebar-brand {
@@ -77,8 +80,8 @@ img.align-center, .figure.align-center {
     padding: 4px;
     font-size: 120%;
     text-align: center;
-    font-weight: bold;
 }
+
 .figure div.legend {
     padding: 0px 4px;
     font-style: italic;
@@ -92,6 +95,41 @@ img.align-center, .figure.align-center {
     margin-bottom: 20px;
 }
 
+/* Article Styling */
+.article-meta {
+    padding: 0px 15px;
+}
+
+article h1 {
+    margin-top: 0px;
+}
+
+.page-header h1 {
+    margin-top: -20px;
+}
+
+span.author, span.category, span.comment-count {
+    margin-left: 15px;
+}
+
+span.tags {
+    display: block;
+}
+
+.entry-content {
+    text-align: justify;
+}
+
+article {
+    /*border-bottom: 1px solid #EAEAEA;*/
+    margin-bottom: 120px;
+}
+
+.page-header {
+    border-bottom: none;
+ }
+
+/* Others */
 i {
     margin-right: 10px;
 }
