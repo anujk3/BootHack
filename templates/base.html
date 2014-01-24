@@ -150,14 +150,9 @@
     {% endif %}
     {% if GITHUB_SKIP_FORK is not defined %}
         {% set GITHUB_SKIP_FORK = "false" %}
-    {% else %}
-        {% if GITHUB_SKIP_FORK %}
-            {% set GITHUB_SKIP_FORK = "true" %}
-        {% else %}
-            {% set GITHUB_SKIP_FORK = "false" %}
-        {% endif %}
     {% endif %}
     <script type="text/javascript">
+        $('.with-tooltip').tooltip();
         $(document).ready(function () {
             if (!window.jXHR) {
                 var jxhr = document.createElement('script');

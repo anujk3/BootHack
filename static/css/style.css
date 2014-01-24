@@ -10,16 +10,8 @@ body {
     border: none;
 }
 
-/* Tag cloud */
-.tag-1 {font-size: 20pt;}
-.tag-2 {font-size: 18pt;}
-.tag-3 {font-size: 16pt;}
-.tag-4 {font-size: 14pt;}
-.tag-5 {font-size: 12pt;}
-.tag-6 {font-size: 10pt;}
-
-
 /* Sidebar styling */
+
 #sidebar {
     padding: 0px 10px;
 }
@@ -34,6 +26,31 @@ body {
 
 #sidebar a {
     color: inherit;
+}
+
+#sidebar i {
+    margin-right: 0px;
+}
+
+#sidebar ul {
+    margin-right: 10px;
+}
+
+/* Tag cloud */
+.tag-1 {font-size: 20pt;}
+.tag-2 {font-size: 18pt;}
+.tag-3 {font-size: 16pt;}
+.tag-4 {font-size: 14pt;}
+.tag-5 {font-size: 12pt;}
+.tag-6 {font-size: 10pt;}
+
+/* Categories */
+.cat-label {
+        margin-left: 5px;
+}
+.cat-list .list-group-item {
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 /* Images */
@@ -87,7 +104,7 @@ img.align-center, .figure.align-center {
 
 .social-side, .tagcloud {
     margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 25px;
     margin-bottom: 20px;
 }
 

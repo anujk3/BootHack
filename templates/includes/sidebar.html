@@ -21,21 +21,19 @@
             {% endif %}
 
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
-            <a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4>Categories <i class="fa fa-home fa-lg"></i></h4></a>
-            <ul class="list-group list-group-flush">
-                    {% for cat, null in categories %}
+            <a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4>Categories <i class="fa fa-folder-open fa-lg"></i></h4></a>
+            <ul class="list-group list-group-flush cat-list">
+                    {% for cat, cat_art in categories %}
                         <li class="list-group-item">
-                            <a href="{{ SITEURL }}/{{ cat.url }}">
-                                <i class="fa fa-folder-open fa-lg"></i>{{ cat }}
-                            </a>
+                        <a class="with-tooltip" href="{{ SITEURL }}/{{ cat.url }}" data-placement="top" data-toggle="tooltip" data-original-title="{{ cat_art|count }} article(s)">{{ cat }}</a>
                         </li>
                     {% endfor %}
             </ul>
             {% endif %}
 
             {% include 'includes/tagcloud.html' %}
-            {% include 'includes/github.html' %}
             {% include 'includes/links.html' %}
+            {% include 'includes/github.html' %}
     </section>
 
 </aside>
