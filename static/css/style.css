@@ -14,6 +14,10 @@ body {
     text-decoration: line-through;
 }
 
+dd {
+    margin-left: 20px;
+}
+
 /* Sidebar styling */
 
 #sidebar {
