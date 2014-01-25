@@ -25,7 +25,7 @@
                 {% include "includes/article_info.html" %}
             </header>
             <div class="entry-content">
-                {{ article.content|replace("<html>","")|replace("<body>","")|replace("</html>","")|replace("</body>","")|indent }}
+                {{ article.content|replace("<html>","")|replace("<body>","")|replace("</html>","")|replace("</body>","") }}
             </div>
             <!-- /.entry-content -->
             {% include 'includes/related-posts.html' %}
