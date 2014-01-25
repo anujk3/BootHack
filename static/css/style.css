@@ -18,6 +18,16 @@ dd {
     margin-left: 20px;
 }
 
+tt {
+    background-color: #F9F2F4;
+    border-radius: 4px;
+    color: #C7254E;
+    font-size: 90%;
+    padding: 2px 4px;
+    white-space: nowrap;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
 /* Sidebar styling */
 
 #sidebar {
