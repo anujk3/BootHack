@@ -120,10 +120,21 @@ img.align-center, .figure.align-center {
 }
 
 
-.social-side, .tagcloud {
+.social-side {
     margin-left: 15px;
     margin-right: 25px;
     margin-bottom: 20px;
+}
+
+.tagcloud {
+    margin-right: 25px !important;
+}
+
+.tagcloud li {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
 }
 
 /* Article Styling */
