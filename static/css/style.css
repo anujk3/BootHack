@@ -135,10 +135,6 @@ article h1 {
     margin-top: 0px;
 }
 
-.page-header h1 {
-    margin-top: -20px;
-}
-
 span.author, span.category, span.comment-count {
     margin-left: 15px;
 }
@@ -157,6 +153,7 @@ article {
 }
 
 .page-header {
+    margin-top: 0px;
     border-bottom: none;
 }
 
