@@ -25,7 +25,15 @@
             <ul class="list-group list-group-flush cat-list">
                     {% for cat, cat_art in categories %}
                         <li class="list-group-item">
-                        <a class="with-tooltip" href="{{ SITEURL }}/{{ cat.url }}" data-placement="top" data-toggle="tooltip" data-original-title="{{ cat_art|count }} article(s)">{{ cat }}</a>
+                        <a class="with-tooltip" href="{{ SITEURL }}/{{ cat.url }}" data-placement="top" data-toggle="tooltip" data-original-title="{{ cat_art|count }} article(s)">
+                        {% if ARTICLE_CATEGORY_IN_SIDEBAR and article and cat != article.category %}
+                            <span class="text-muted">
+                        {% endif %}
+                            {{ cat }}
+                        {% if ARTICLE_CATEGORY_IN_SIDEBAR and article and cat != article.category %}
+                            </span>
+                        {% endif %}
+                        </a>
                         </li>
                     {% endfor %}
             </ul>

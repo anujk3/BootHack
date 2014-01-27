@@ -24,7 +24,13 @@
     {% for tag in TAGS %}
         <li class="list-group-item tag-{{ tag.1 }}">
             <a href="{{ SITEURL }}/{{ tag.0.url }}">
+            {% if ARTICLE_TAGS_IN_SIDEBAR and article and tag.0 not in article.tags %}
+                <span class="text-muted">
+            {% endif %}
                 {{ tag.0|lower }}
+            {% if ARTICLE_TAGS_IN_SIDEBAR and article and tag.0 not in article.tags %}
+                </span>
+            {% endif %}
             </a>
         </li>
     {% endfor %}

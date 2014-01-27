@@ -9,7 +9,7 @@
     </span>
     {% endif %}
 
-    {% if article.category %}
+    {% if article.category  and not ARTICLE_CATEGORY_IN_SIDEBAR %}
     <span class="category">
         <i class="fa fa-folder-open"></i><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     </span>
