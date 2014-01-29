@@ -24,6 +24,9 @@
                 </h1>
                 {% include "includes/article_info.html" %}
             </header>
+            <div class="summary">
+                <p class="lead">{{ article.description }}</p>
+            </div>
             <div class="entry-content">
                 {{ article.content|replace("<html>","")|replace("<body>","")|replace("</html>","")|replace("</body>","") }}
             </div>
