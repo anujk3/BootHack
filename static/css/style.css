@@ -154,10 +154,6 @@ span.tags {
     display: block;
 }
 
-.entry-content {
-    text-align: justify;
-}
-
 article {
     /*border-bottom: 1px solid #EAEAEA;*/
     margin-bottom: 120px;
