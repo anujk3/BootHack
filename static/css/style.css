@@ -30,7 +30,7 @@ body {
 .tag-5 {font-size: 10pt;}
 .tag-6 {font-size: 8pt;}
 
-#sidebar {
+#sidebar-content {
     padding: 0px 10px;
     -ms-word-break: break-all;
     word-break: break-all;
@@ -180,6 +180,11 @@ img.align-center, .figure.align-center {
     padding-bottom: 4px;
 }
 
+#site-links-side {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 /* Custom Text tweaks */
 .strike {
     text-decoration: line-through;
@@ -243,3 +248,6 @@ p a, p a:hover {
     color: #3498DB;
 }
 
+.social-nav-link {
+    margin-right: 5px;
+}

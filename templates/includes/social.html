@@ -1,8 +1,0 @@
-{% if SOCIAL %}
-<div class="social-side">
-    {% for name, link in SOCIAL %}
-        <a href="{{ link }}"><i class="fa fa-{{ name|lower|replace('+','-plus') }} fa-lg"></i></a>
-    {% endfor %}
-</div>
-{% endif %}
-

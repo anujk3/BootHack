@@ -108,6 +108,11 @@
                     {% endfor %}
                 {% endif %}
             </ul>
+            <p class="navbar-text navbar-right">
+                {% for name, link in SOCIAL %}
+                        <a class="navbar-link social-nav-link" href="{{ link }}"><i class="fa fa-{{ name|lower|replace('+','-plus') }} fa-lg"></i></a>
+                {% endfor %}
+            </p>
         </div>
         <!-- /.navbar-collapse -->
     </div>
