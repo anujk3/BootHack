@@ -1,8 +1,8 @@
 {% if article.tags and not ARTICLE_TAGS_IN_SIDEBAR %}
-<span class="tags">
-<i class="fa fa-tags"></i>
-    {% for tag in article.tags %}
-    <span class="label label-default"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-    {% endfor %}
-</span>
+	<span id="article-tags">
+		<i class="fa fa-tags"></i>
+		    {% for tag in article.tags %}
+			    <span class="label label-default"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+		    {% endfor %}
+	</span>
 {% endif %}

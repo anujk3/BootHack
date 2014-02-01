@@ -1,16 +1,16 @@
-<footer class="article-meta">
-    <span class="published">
+<footer class="post-info">
+    <span id="article-datetime">
         <i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
     </span>
 
     {% if article.author %}
-    <span class="author">
+    <span id="article-author">
         <a href="{{ SITEURL }}/{{ article.author.url }}"><i class="fa fa-user"></i>{{ article.author }}</a>
     </span>
     {% endif %}
 
     {% if article.category  and not ARTICLE_CATEGORY_IN_SIDEBAR %}
-    <span class="category">
+    <span id="article-category">
         <i class="fa fa-folder-open"></i><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     </span>
     {% endif %}

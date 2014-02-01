@@ -6,52 +6,20 @@ body {
     background-color: transparent;
 }
 
+/* for list-groups nested within a list-group-item, reset the bottom margin */
+.list-group-item > .list-group {
+    margin-bottom: 0px;
+}
+
+/* for list-group-items nested within a list-group-item, reset the bottom
+   padding of the last item, b/c the containing item has paddimg already 
+ */
+.list-group-item .list-group-item:last-child {
+    padding-bottom: 0px;
+}
+
 .list-group-item {
     border: none;
-}
-
-.strike {
-    text-decoration: line-through;
-}
-
-dd {
-    margin-left: 20px;
-}
-
-tt {
-    background-color: #F9F2F4;
-    border-radius: 4px;
-    color: #C7254E;
-    font-size: 90%;
-    padding: 2px 4px;
-    white-space: nowrap;
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-}
-
-/* Sidebar styling */
-
-#sidebar {
-    padding: 0px 10px;
-}
-
-#sidebar-brand {
-    text-align: center;
-}
-
-#sidebar-content {
-    text-align: right;
-}
-
-#sidebar a {
-    color: inherit;
-}
-
-#sidebar i {
-    margin-right: 0px;
-}
-
-#sidebar ul {
-    margin-right: 10px;
 }
 
 /* Tag cloud */
@@ -62,16 +30,50 @@ tt {
 .tag-5 {font-size: 10pt;}
 .tag-6 {font-size: 8pt;}
 
-/* Categories */
-.cat-label {
-        margin-left: 5px;
-}
-.cat-list .list-group-item {
-    padding-top: 4px;
-    padding-bottom: 4px;
+#sidebar {
+    padding: 0px 10px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
-/* Images */
+#sidebar a {
+    color: inherit;
+}
+
+#sidebar-content .icon-label {
+    margin-right: 10px;
+}
+
+/* Example for how to control spacing between icon and label in specific
+   lists in the sidebar. To change, override in your CUSTOM_CSS           */
+#sidebar #social i {
+    margin-right: 3px;
+}
+
+a, a:hover {
+    color: inherit;
+}
+
+.entry-content a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.entry-content a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.entry-content img {
+    max-width: 100%;
+    height: auto;
+}
+
 .figure {
     border: 1px solid #DDDDDD;
     border-radius: 4px;
@@ -81,12 +83,18 @@ tt {
     transition: all 0.2s ease-in-out 0s;
 }
 
-img.align-center, .figure.align-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.7em;
-    margin-bottom: 1.5em;
+.figure p.caption {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 4px;
+    font-size: 120%;
+    text-align: center;
+}
+
+.figure div.legend {
+    padding: 0px 4px;
+    font-style: italic;
+    text-align: justify;
 }
 
 .figure.align-right {
@@ -105,105 +113,26 @@ img.align-center, .figure.align-center {
     margin-bottom: 1em;
 }
 
-.figure p.caption {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 4px;
-    font-size: 120%;
-    text-align: center;
-}
-
-.figure div.legend {
-    padding: 0px 4px;
-    font-style: italic;
-    text-align: justify;
-}
-
-
-.social-side {
-    margin-left: 15px;
-    margin-right: 25px;
-    margin-bottom: 20px;
-}
-
-.tagcloud {
-    margin-right: 25px !important;
-}
-
-.tagcloud li {
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-right: 0px;
-}
-
-/* Article Styling */
-.article-meta {
-    padding: 0px 15px;
-}
-
-article h1 {
-    margin-top: 0px;
-}
-
-span.author, span.category, span.comment-count {
-    margin-left: 15px;
-}
-
-span.tags {
+img.align-center, .figure.align-center {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.7em;
+    margin-bottom: 1.5em;
 }
 
-article {
-    /*border-bottom: 1px solid #EAEAEA;*/
-    margin-bottom: 120px;
+.highlighttable pre {
+    /* Removes bootstrap default margin-bottom */
+    margin-bottom: 0px;
 }
 
-.page-header {
-    margin-top: 0px;
-    border-bottom: none;
+.highlighttable {
+    /* Adds them margin-bottom to highlightable instead of <pre> */
+    margin-bottom: 11px;
 }
 
-#more {
-    padding-left: 10px;
-}
-
-#more i {
-    padding-left: 5px;
-    margin-right: 5px;
-}
-
-/* Others */
-i {
-    margin-right: 10px;
-}
-
-a, a:hover {
-    color: inherit;
-}
-
-p a, p a:hover {
-    color: #3498DB;
-}
-
-.entry-content a {
-    text-decoration: none;
-    border-bottom: 1px dotted;
-}
-
-.entry-content a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid;
-}
-
-.entry-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-.highlight pre {
-    background-color: #202020;
-    color: #777;
+.highlighttable .code {
+    width: 100%;
 }
 
 #categories ul, #tags ul {
@@ -228,3 +157,89 @@ p a, p a:hover {
     font-size: 0.9em;
     margin-right: 10px;
 }
+
+/* Sidebar Tweaks */
+#sidebar-brand {
+    text-align: center;
+}
+
+#sidebar-content {
+    text-align: right;
+}
+
+#tags {
+    margin-right: 15px;
+}
+
+.tagcloud li {
+    padding: 0px;
+}
+
+#categories .list-group-item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* Custom Text tweaks */
+.strike {
+    text-decoration: line-through;
+}
+
+dd {
+    margin-left: 20px;
+}
+
+tt {
+    background-color: #F9F2F4;
+    border-radius: 4px;
+    color: #C7254E;
+    font-size: 90%;
+    padding: 2px 4px;
+    white-space: nowrap;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+/* Article Styling */
+article {
+    /*border-bottom: 1px solid #EAEAEA;*/
+    margin-bottom: 120px;
+}
+
+article h1 {
+    margin-top: 0px;
+}
+
+.page-header {
+    margin-top: 0px;
+    border-bottom: none;
+}
+
+.post-info {
+    padding: 0px 15px;
+}
+
+#article-datetime i, #article-author i, #article-comment-count i, #article-category i {
+    margin-right: 5px;
+}
+#article-author i, #article-comment-count i, #article-category i {
+    margin-left: 15px;
+}
+
+#article-tags {
+    display: block;
+}
+
+#more {
+    padding-left: 10px;
+}
+
+#more i {
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+/* Others */
+p a, p a:hover {
+    color: #3498DB;
+}
+
