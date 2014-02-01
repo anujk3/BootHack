@@ -11,13 +11,15 @@
 
 {% block content %}
     <section id="content">
-        <h1>Archives for {{ SITENAME }}</h1>
+        <article>
+            <h1>Archives for {{ SITENAME }}</h1>
 
-        <dl>
-            {% for article in dates %}
-                <dt>{{ article.locale_date }}</dt>
-                <dd><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></dd>
-            {% endfor %}
-        </dl>
+            <dl>
+                {% for article in dates %}
+                    <dt>{{ article.locale_date }}</dt>
+                    <dd><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></dd>
+                {% endfor %}
+            </dl>
+        </article>
     </section>
 {% endblock %}
