@@ -175,7 +175,7 @@ img.align-center, .figure.align-center {
     padding: 0px;
 }
 
-#categories .list-group-item {
+#categories .list-group-item, #links .list-group-item{
     padding-top: 4px;
     padding-bottom: 4px;
 }
