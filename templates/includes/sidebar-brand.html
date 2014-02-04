@@ -16,5 +16,20 @@
             {% endfor %}
         </ul>
     </div>
+
+    {% if GOOGLE_CSE_ID %}
+    <div id="site-search">
+        <form id="cse-search-box" role="search" action="http://google.com/cse">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button class="btn btn-default" name="sa" value="search" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+            <input type="hidden" name="cx" value="{{ GOOGLE_CSE_ID }}" />
+            <input type="hidden" name="ie" value="UTF-8" />
+            <input type="text" class="form-control" placeholder="Search" name="q" id="srch-term">
+        </div>
+        </form>
+    </div>
+    {% endif %}
     <hr />
 </section>
