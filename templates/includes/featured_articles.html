@@ -1,0 +1,46 @@
+{% if MAX_FEATURED_ARTICLES is not defined %}
+    {% set MAX_FEATURED_ARTICLES = 5 %}
+{% endif %}
+
+{% set FEATURED_ARTICLES = [] %}
+{% for article in articles %}
+    {% if article.featured %}
+        {% do FEATURED_ARTICLES.append(article) %}
+    {% endif %}
+{% endfor %}
+
+{% if FEATURED_ARTICLES %}
+    <!-- Carousel -->
+    <div class="col-xs-12 col-md-12" id="carousel">
+        <div data-ride="carousel" class="carousel slide" id="carousel-featured-articles">
+            <ol class="carousel-indicators">
+            {% for article in FEATURED_ARTICLES %}
+                {% if (loop.index - 1) <= MAX_FEATURED_ARTICLES %}
+                    <li {% if loop.index == 1 %}class="active"{% endif %} data-slide-to="{{ loop.index - 1 }}" data-target="#carousel-featured-articles"></li>
+                {% endif %}
+            {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+            {% for article in FEATURED_ARTICLES %}
+                {% if (loop.index - 1) <= MAX_FEATURED_ARTICLES %}
+                <div class="item{% if loop.index == 1 %} active{% endif %}">
+                    <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">
+                        <img alt="{{ article.title }}" src="{{ SITEURL }}{{ article.featured }}" class="align-center">
+                    </a>
+                    <div class="carousel-caption">
+                        {% if article.title %}<h3><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h3>{% endif %}
+                        {% if article.description %}<p>{{ article.description|truncate(100, True) }}</p>{% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+            <a data-slide="prev" href="#carousel-featured-articles" class="left carousel-control">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a data-slide="next" href="#carousel-featured-articles" class="right carousel-control">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+{% endif %}

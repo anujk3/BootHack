@@ -120,6 +120,9 @@
 
 <div class="container">
     <div class="row">
+        {% if articles %}
+            {% include 'includes/featured_articles.html' %}
+        {% endif %}
         <div class="col-xs-12 col-md-3 " id="sidebar">
             <aside>
             <div id="sidebar-brand">
@@ -151,6 +154,9 @@
 
 <script type="text/javascript">
     $('.with-tooltip').tooltip();
+    $('.carousel').carousel({
+              interval: false
+              })
 </script>
 
 {% include 'includes/github-js.html' %}

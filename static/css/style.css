@@ -186,7 +186,7 @@ img.align-center, .figure.align-center {
 }
 
 #site-links-side li {
-    padding: 0px;
+    padding: 0 0 5px;
 }
 
 /* Custom Text tweaks */
@@ -271,4 +271,24 @@ p a, p a:hover {
     margin-top: 5px;
     margin-bottom: 10px;
     padding-right: 0px;
+}
+
+
+#carousel {
+    margin-bottom: 40px;
+    background: #333333;
+    padding: 0px;
+}
+.carousel-caption {
+    top: 0px;
+    bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+.carousel-inner img {
+    max-height: 220px !important;
+    height: 220px !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
