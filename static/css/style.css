@@ -248,7 +248,7 @@ article h1 {
 }
 
 /* Others */
-p a, p a:hover {
+.entry-content a, .entry-content a:hover {
     color: #3498DB;
 }
 
