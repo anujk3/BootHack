@@ -272,3 +272,14 @@ p a, p a:hover {
     margin-bottom: 10px;
     padding-right: 0px;
 }
+
+.table.docutils {
+    border: 0px;
+
+}
+
+.table.docutils thead tr th, .table.docutils tbody tr td {
+    border-left: 0 none;
+    border-right: 0 none;
+    border-bottom: 0 none;
+}
