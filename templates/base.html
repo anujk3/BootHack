@@ -26,19 +26,33 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="{{ article.title|striptags }}"/>
             <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
+            {% if article.description %}
             <meta property="og:description" content="{{ article.description|striptags }}"/>
+            {% else %}
+            <meta property="og:description" content="{{ article.summary|striptags|truncate(150) }}"/>
+            {% endif %}
+            {% if OPEN_GRAPH_IMAGE or article.image %}
+            <meta property="og:image" content="{{ SITEURL }}{% if article.image %}{{ article.image }}{% else %}{{ OPEN_GRAPH_IMAGE }}{% endif %}" />
+            {% endif %}
         {% elif page %}
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="{{ page.title }}"/>
             <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
+            {% if page.description %}
+            <meta property="og:description" content="{{ page.description|striptags }}"/>
+            {% else %}
+            <meta property="og:description" content="{{ page.summary|striptags|truncate(150) }}"/>
+            {% endif %}
+            {% if OPEN_GRAPH_IMAGE or page.image %}
+            <meta property="og:image" content="{{ SITEURL }}{% if page.image %}{{ page.image }}{% else %}{{ OPEN_GRAPH_IMAGE }}{% endif %}" />
+            {% endif %}
         {% else %}
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="{{ SITENAME }}"/>
             <meta property="og:url" content="{{ SITEURL }}"/>
             <meta property="og:description" content="{{ SITENAME }}"/>
             {% if OPEN_GRAPH_IMAGE %}
-            <meta property="og:image"
-                  content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}"/>
+            <meta property="og:image" content="{{ SITEURL }}{{ OPEN_GRAPH_IMAGE }}"/>
             {% endif %}
         {% endif %}
     {% endif %}
@@ -64,12 +78,10 @@
     {% endif %}
 
     {% if FEED_ALL_ATOM %}
-        <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
-              title="{{ SITENAME }} ATOM Feed"/>
+        <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed"/>
     {% endif %}
     {% if FEED_ALL_RSS %}
-        <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate"
-              title="{{ SITENAME }} RSS Feed"/>
+        <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed"/>
     {% endif %}
 
 </head>
