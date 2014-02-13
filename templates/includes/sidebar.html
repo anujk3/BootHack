@@ -23,7 +23,7 @@
             {% endif %}
 
             {% if DISPLAY_CATEGORIES_ON_SIDEBAR %}
-                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><h4><span class="icon-label">Categories</span><i class="fa fa-home fa-lg"></i></h4></a>
+                <li class="list-group-item"><a href="{{ SITEURL }}/{{ CATEGORIES_URL|default("categories") }}"><h4><span class="icon-label">Categories</span><i class="fa fa-home fa-lg"></i></h4></a>
                     <ul class="list-group" id="categories">
                     {% for cat, cat_art in categories %}
                         <li class="list-group-item">
