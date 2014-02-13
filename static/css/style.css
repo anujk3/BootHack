@@ -93,11 +93,12 @@ a, a:hover {
 
 .figure div.legend {
     padding: 0px 4px;
+    font-size: small;
     font-style: italic;
     text-align: justify;
 }
 
-.figure.align-right {
+img.align-right, .figure.align-right {
     float: right;
     margin-top: 0em;
     margin-right: 0em;
@@ -105,7 +106,7 @@ a, a:hover {
     margin-bottom: 1em;
 }
 
-.figure.align-left {
+img.align-left, .figure.align-left {
     float: left;
     margin-top: 0em;
     margin-right: 1em;
@@ -282,4 +283,8 @@ article h1 {
     border-left: 0 none;
     border-right: 0 none;
     border-bottom: 0 none;
+}
+
+.figure-summary {
+    margin-right: 20px;
 }
