@@ -212,7 +212,8 @@ tt {
 /* Article Styling */
 article {
     /*border-bottom: 1px solid #EAEAEA;*/
-    margin-bottom: 120px;
+    margin-bottom: 90px;
+    overflow: hidden;
 }
 
 article h1 {
