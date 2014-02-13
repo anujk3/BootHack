@@ -28,8 +28,10 @@
             <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
             {% if article.description %}
             <meta property="og:description" content="{{ article.description|striptags }}"/>
+            <meta name="description" content="{{ article.description|striptags }}"/>
             {% else %}
             <meta property="og:description" content="{{ article.summary|striptags|truncate(150) }}"/>
+            <meta name="description" content="{{ article.summary|striptags|truncate(150) }}"/>
             {% endif %}
             {% if OPEN_GRAPH_IMAGE or article.image %}
             <meta property="og:image" content="{{ SITEURL }}{% if article.image %}{{ article.image }}{% else %}{{ OPEN_GRAPH_IMAGE }}{% endif %}" />
@@ -40,8 +42,10 @@
             <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
             {% if page.description %}
             <meta property="og:description" content="{{ page.description|striptags }}"/>
+            <meta name="description" content="{{ page.description|striptags }}"/>
             {% else %}
             <meta property="og:description" content="{{ page.summary|striptags|truncate(150) }}"/>
+            <meta name="description" content="{{ page.summary|striptags|truncate(150) }}"/>
             {% endif %}
             {% if OPEN_GRAPH_IMAGE or page.image %}
             <meta property="og:image" content="{{ SITEURL }}{% if page.image %}{{ page.image }}{% else %}{{ OPEN_GRAPH_IMAGE }}{% endif %}" />
@@ -50,7 +54,10 @@
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="{{ SITENAME }}"/>
             <meta property="og:url" content="{{ SITEURL }}"/>
-            <meta property="og:description" content="{{ SITENAME }}"/>
+            {% if SITEDESCRIPTION %}
+            <meta property="og:description" content="{{ SITEDESCRIPTION }}"/>
+            <meta name="description" content="{{ SITEDESCRIPTION }}"/>
+            {% endif %}
             {% if OPEN_GRAPH_IMAGE %}
             <meta property="og:image" content="{{ SITEURL }}{{ OPEN_GRAPH_IMAGE }}"/>
             {% endif %}
