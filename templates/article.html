@@ -31,6 +31,11 @@
                 {{ article.content|replace("<html>","")|replace("<body>","")|replace("</html>","")|replace("</body>","") }}
             </div>
             <!-- /.entry-content -->
+            {% if AUTHORS is defined and article.author.name in AUTHORS %}
+                {% set _author = AUTHORS[article.author.name] %}
+                {% set author = article.author %}
+                {% include 'includes/author-bio.html' %}
+            {% endif %}
             {% include 'includes/related-posts.html' %}
             {% include 'includes/addthis.html' %}
             {% if article.comments != "closed" %}

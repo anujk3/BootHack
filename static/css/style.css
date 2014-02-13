@@ -249,8 +249,24 @@ article h1 {
     margin-right: 5px;
 }
 
+.author-bio {
+    overflow: hidden;
+}
+
+.author-bio img {
+    margin-right: 10px;
+    width: 120px;
+    max-width: 120px;
+    height: auto;
+}
+
+.author-bio-text p {
+    margin-bottom: 5px;
+}
+
 /* Others */
-.entry-content a, .entry-content a:hover {
+.entry-content a, .entry-content a:hover,
+.author-bio a, .author-bio a:hover {
     color: #3498DB;
 }
 
