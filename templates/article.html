@@ -33,7 +33,9 @@
             <!-- /.entry-content -->
             {% include 'includes/related-posts.html' %}
             {% include 'includes/addthis.html' %}
-            {% include 'includes/comments.html' %}
+            {% if page.comments != "closed" %}
+                {% include 'includes/comments.html' %}
+            {% endif %}
         </article>
     </section>
 

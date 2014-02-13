@@ -23,5 +23,8 @@
         <div class="entry-content">
             {{ page.content }}
         </div>
+        {% if page.comments != "closed" %}
+            {% include 'includes/comments.html' %}
+        {% endif %}
     </section>
 {% endblock %}
