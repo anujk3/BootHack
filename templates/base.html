@@ -139,6 +139,7 @@
 
 <div class="container">
     <div class="row">
+        {% if CONTEXT not in HIDE_SIDEBAR_IN %}
         <div class="col-xs-12 col-md-3 " id="sidebar">
             <aside>
             <div id="sidebar-brand">
@@ -150,7 +151,8 @@
             </div>
             </aside>
         </div>
-        <div class="col-xs-12 col-md-8 "> 
+        {% endif %}
+        <div class="{% if CONTEXT in HIDE_SIDEBAR_IN %}col-xs-12 col-md-10 col-md-offset-1{% else %}col-xs-12 col-md-8{% endif %}">
             {% block breadcrumbs %}
             {% endblock %}
             {% block content %}

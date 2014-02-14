@@ -1,3 +1,6 @@
+{% if CONTEXT is not defined %}
+    {% set CONTEXT = 'index' %}
+{% endif %}
 {% extends "base.html" %}
 {% block content %}
     {% if articles %}
