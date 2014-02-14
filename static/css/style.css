@@ -264,6 +264,12 @@ article h1 {
     margin-bottom: 5px;
 }
 
+.author-avatar {
+    width: 180px;
+    max-width: 180px;
+    height: auto;
+}
+
 /* Others */
 .entry-content a, .entry-content a:hover,
 .author-bio a, .author-bio a:hover {
@@ -304,4 +310,10 @@ article h1 {
 
 .figure-summary {
     margin-right: 20px;
+}
+
+.figure-summary img {
+    width: 150px;
+    height: auto;
+    max-width: 150px;
 }
