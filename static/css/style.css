@@ -271,6 +271,7 @@ article h1 {
 
 /* Others */
 .entry-content a, .entry-content a:hover,
+footer .container a, footer .container a:hover,
 .author-bio a, .author-bio a:hover {
     color: #3498DB;
 }
