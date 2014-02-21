@@ -52,7 +52,7 @@ body {
     margin-right: 3px;
 }
 
-a, a:hover {
+a, a:hover, a:focus {
     color: inherit;
 }
 
