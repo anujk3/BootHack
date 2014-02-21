@@ -185,8 +185,12 @@ img.align-center, .figure.align-center {
     margin-right: 15px;
 }
 
-#site-links-side li {
+#site-links-side li,
+#article-tags li {
     padding: 0 0 5px;
+}
+#article-tags ul {
+    margin-bottom: 0px;
 }
 
 /* Custom Text tweaks */
@@ -221,6 +225,7 @@ article h1 {
 
 .page-header {
     margin-top: 0px;
+    margin-bottom: 5px;
     border-bottom: none;
 }
 
@@ -285,10 +290,7 @@ footer .container a, footer .container a:hover,
 }
 
 #all-tags li {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 0px;
-    padding-right: 2px;
+    padding: 0 0 5px;
 }
 
 #tag-search {
