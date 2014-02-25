@@ -1,6 +1,6 @@
 <li class="list-group-item">
     <a href="{{ SITEURL }}/{{ CATEGORIES_URL|default("categories") }}">
-        <h4><span class="icon-label">Categories</span>{% if not IN_CONDENSED_SIDEBAR %}<i class="fa fa-folder-open fa-lg"></i>{% endif %}</h4>
+        <h4>{% if not IN_CONDENSED_SIDEBAR %}<i class="fa fa-folder-open fa-lg pull-{% if SIDEBAR_POSITION == 'left' %}right{% else %}left{% endif %}"></i>{% endif %}Categories</h4>
     </a>
     <ul class="list-group" id="categories">
     {% for cat, cat_art in categories %}

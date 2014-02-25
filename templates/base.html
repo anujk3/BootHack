@@ -140,7 +140,14 @@
 <div class="container">
     <div class="row">
         {% include 'sidebar/base.html' %}
-        <div class="{% if CONTEXT in HIDE_SIDEBAR_IN %}col-xs-12 col-md-10 col-md-offset-1{% else %}col-xs-12 col-md-8{% endif %}">
+        <div class="
+        {%- if CONTEXT in HIDE_SIDEBAR_IN -%}
+            col-xs-12 col-md-10 col-md-offset-1
+        {%- else -%}
+            col-xs-12 col-md-8
+            {%- if SIDEBAR_POSITION == 'right' %} col-md-pull-2{% endif -%}
+        {%- endif -%}
+        ">
             {% block breadcrumbs %}
             {% endblock %}
             {% block content %}

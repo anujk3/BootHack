@@ -1,13 +1,17 @@
-{% if CONTEXT not in HIDE_SIDEBAR_IN %}
-<div class="col-xs-12 col-md-3 " id="sidebar">
-    <aside>
-    <div id="sidebar-brand">
-        {% include 'sidebar/sidebar-brand.html' %}
-    </div>
+{% if SIDEBAR_POSITION is not defined %}
+    {% set SIDEBAR_POSITION = 'left' %}
+{% endif %}
 
-    <div class="visible-lg visible-md" id="sidebar-content">
-        {% include 'sidebar/sidebar.html' %}
+{% if CONTEXT not in HIDE_SIDEBAR_IN %}
+    <div class="col-xs-12 col-md-3 {% if SIDEBAR_POSITION == 'right' %}col-md-push-9{% endif %}" id="sidebar">
+        <aside>
+        <div id="sidebar-brand">
+            {% include 'sidebar/sidebar-brand.html' %}
+        </div>
+
+        <div class="visible-lg visible-md" id="sidebar-content{% if SIDEBAR_POSITION == 'left' %}-left{% endif %}">
+            {% include 'sidebar/sidebar.html' %}
+        </div>
+        </aside>
     </div>
-    </aside>
-</div>
 {% endif %}

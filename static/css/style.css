@@ -31,7 +31,6 @@ body {
 .tag-6 {font-size: 8pt;}
 
 #sidebar-content {
-    padding: 0px 10px;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
@@ -40,10 +39,6 @@ body {
 
 #sidebar a {
     color: inherit;
-}
-
-#sidebar-content .icon-label {
-    margin-right: 10px;
 }
 
 /* Example for how to control spacing between icon and label in specific
@@ -135,7 +130,7 @@ img.align-center, .figure.align-center {
     width: 100%;
 }
 
-#categories ul, #tags ul {
+#categories ul, #tags-left ul, #tags-right ul {
     list-style: none;
     padding: 0;
     margin-left: 0;
@@ -163,12 +158,16 @@ img.align-center, .figure.align-center {
     text-align: center;
 }
 
-#sidebar-content {
+#sidebar-content-left {
     text-align: right;
 }
 
-#tags {
+#tags-left {
     margin-right: 15px;
+}
+
+#tags-right {
+    margin-left: 15px;
 }
 
 .tagcloud li {
@@ -318,4 +317,11 @@ footer .container a, footer .container a:hover,
     width: 150px;
     height: auto;
     max-width: 150px;
+}
+
+#twitter-timeline-left {
+    margin-right: 30px;
+}
+#twitter-timeline-right {
+    margin-left: 30px;
 }
