@@ -1,0 +1,13 @@
+{% if CONTEXT not in HIDE_SIDEBAR_IN %}
+<div class="col-xs-12 col-md-3 " id="sidebar">
+    <aside>
+    <div id="sidebar-brand">
+        {% include 'sidebar/sidebar-brand.html' %}
+    </div>
+
+    <div class="visible-lg visible-md" id="sidebar-content">
+        {% include 'sidebar/sidebar.html' %}
+    </div>
+    </aside>
+</div>
+{% endif %}

@@ -1,0 +1,24 @@
+{% if SIDEBAR_ELEMENTS is not defined %}
+    {% set SIDEBAR_ELEMENTS = ['condensed', 'link', 'twitter' 'github'] %}
+{% endif %}
+{%
+    set SIDEBAR_MAP = {
+            'condensed' :  'sidebar/condensed.html',
+            'recent' :  'sidebar/recent-posts.html',
+            'categories' :  'sidebar/categories.html',
+            'tagcloud' :  'sidebar/tagcloud.html',
+            'links' :  'includes/links.html',
+            'twitter' :  'includes/twitter_timeline.html',
+            'github' :  'includes/github.html',
+    }
+%}
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+            {% for element in SIDEBAR_ELEMENTS %}
+                {% include SIDEBAR_MAP[element] %}
+            {% endfor %}
+        </ul>
+    </section>
+</aside>
