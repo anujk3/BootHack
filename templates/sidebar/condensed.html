@@ -1,6 +1,7 @@
-{% if CONDENSED_SIDEBAR_ITEMS is not defined %}
+{% if CONDENSED_SIDEBAR_ITEMS is not defined or 'all' in CONDENSED_SIDEBAR_ITEMS %}
     {% set CONDENSED_SIDEBAR_ITEMS = ['categories', 'tagcloud', 'recent'] %}
 {% endif %}
+
 {% set CONDENSED_SIDEBAR_TITLES = {'categories': 'Categories', 'tagcloud': 'Tags', 'recent': 'Recent Articles'} %}
 {% set CONDENSED_SIDEBAR_ICONS = {'categories': 'fa-folder-open', 'tagcloud': 'fa-tags', 'recent': 'fa-clock-o'} %}
 {% set CONDENSED_SIDEBAR_MAP = {'categories': 'sidebar/categories.html', 'tagcloud': 'sidebar/tagcloud.html', 'recent': 'sidebar/recent-posts.html' } %}

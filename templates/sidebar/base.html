@@ -2,16 +2,37 @@
     {% set SIDEBAR_POSITION = 'left' %}
 {% endif %}
 
+{% if SIDEBAR_ELEMENTS is not defined or 'all' in SIDEBAR_ELEMENTS %}
+    {% set SIDEBAR_ELEMENTS = ['brand', 'condensed', 'links', 'twitter', 'github'] %}
+{% endif %}
+
+{%
+    set SIDEBAR_MAP = {
+            'condensed' :  'sidebar/condensed.html',
+            'recent' :  'sidebar/recent-posts.html',
+            'categories' :  'sidebar/categories.html',
+            'tagcloud' :  'sidebar/tagcloud.html',
+            'links' :  'includes/links.html',
+            'twitter' :  'includes/twitter_timeline.html',
+            'github' :  'includes/github.html',
+    }
+%}
+
 {% if CONTEXT not in HIDE_SIDEBAR_IN %}
     <div class="col-xs-12 col-md-3 {% if SIDEBAR_POSITION == 'right' %}col-md-push-9{% endif %}" id="sidebar">
         <aside>
-        <div id="sidebar-brand">
-            {% include 'sidebar/sidebar-brand.html' %}
-        </div>
+            {% if 'brand' in SIDEBAR_ELEMENTS %}
+                {% include 'sidebar/brand.html' %}
+                {% do SIDEBAR_ELEMENTS.remove('brand') %}
+            {% endif %}
 
-        <div class="visible-lg visible-md" id="sidebar-content{% if SIDEBAR_POSITION == 'left' %}-left{% endif %}">
-            {% include 'sidebar/sidebar.html' %}
-        </div>
+            <section class="visible-lg visible-md" id="sidebar-content{% if SIDEBAR_POSITION == 'left' %}-left{% endif %}">
+                <ul class="list-group list-group-flush">
+                    {% for element in SIDEBAR_ELEMENTS %}
+                        {% include SIDEBAR_MAP[element] %}
+                    {% endfor %}
+                </ul>
+            </section>
         </aside>
     </div>
 {% endif %}
