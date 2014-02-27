@@ -12,7 +12,7 @@ body {
 }
 
 /* for list-group-items nested within a list-group-item, reset the bottom
-   padding of the last item, b/c the containing item has paddimg already 
+   padding of the last item, b/c the containing item has paddimg already
  */
 .list-group-item .list-group-item:last-child {
     padding-bottom: 0px;
@@ -20,6 +20,7 @@ body {
 
 .list-group-item {
     border: none;
+    background-color: transparent;
 }
 
 /* Tag cloud */
