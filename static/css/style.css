@@ -326,3 +326,27 @@ footer .container a, footer .container a:hover,
 #twitter-timeline-right {
     margin-left: 30px;
 }
+
+.banner-brand {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    max-width: 125px;
+}
+
+#site-banner-brand span {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+#site-banner {
+    box-shadow:
+        0 15px 10px -10px rgba(0, 0, 0, 0.4) inset,
+        0 -15px 10px -10px rgba(0, 0, 0, 0.4) inset
+}
+
+#site-banner-brand {
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

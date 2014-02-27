@@ -1,3 +1,11 @@
+{% if 'all' in HIDE_SIDEBAR_IN %}
+    {% set HIDE_SIDEBAR_IN = ['archives', 'article', 'author', 'authors', 'categories', 'category', 'index', 'page', 'tag', 'tags'] %}
+{% endif %}
+
+{% if 'all' in SHOW_SITE_BANNER_IN %}
+    {% set SHOW_SITE_BANNER_IN = ['archives', 'article', 'author', 'authors', 'categories', 'category', 'index', 'page', 'tag', 'tags'] %}
+{% endif %}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
@@ -92,8 +100,8 @@
     {% endif %}
 
 </head>
-<body>
 
+<body>
 <div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -137,7 +145,11 @@
     </div>
 </div> <!-- /.navbar -->
 
-<div class="container">
+{% if CONTEXT in SHOW_SITE_BANNER_IN %}
+    {% include 'includes/site-banner.html' %}
+{% endif %}
+
+<div id="content" class="container">
     <div class="row">
         {% include 'sidebar/base.html' %}
         <div class="
@@ -176,6 +188,5 @@
 
 {% block script %}
 {% endblock %}
-
 </body>
 </html>
