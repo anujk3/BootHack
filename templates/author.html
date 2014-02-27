@@ -33,7 +33,7 @@
             <div class="summary">
             {% if article.description %}{{ article.description }}{% else %}{{ article.summary|striptags|truncate(150) }}{% endif %}
             </div>
-            <a id="more" class="btn btn-default btn-xs pull-right" href="{{ SITEURL }}/{{ article.url }}">more <i class="fa fa-long-arrow-right"></i></a>
+            <a id="more" class="btn btn-primary btn-xs pull-right" href="{{ SITEURL }}/{{ article.url }}">More <i class="fa fa-long-arrow-right"></i></a>
         </article>
     {% endfor %}
 

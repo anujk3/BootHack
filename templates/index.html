@@ -14,7 +14,7 @@
                     {{ article.summary|replace("<html>","")|replace("<body>","")|replace("</html>","")|replace("</body>","") }}
                     </div>
                     <div>
-                        <a id="more" class="btn btn-default btn-xs pull-right" href="{{ SITEURL }}/{{ article.url }}">more <i class="fa fa-long-arrow-right"></i></a>
+                        <a id="more" class="btn btn-primary btn-xs pull-right" href="{{ SITEURL }}/{{ article.url }}">More <i class="fa fa-long-arrow-right"></i></a>
                     </div>
             </article>
         {% endfor %}
