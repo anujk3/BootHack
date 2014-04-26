@@ -1,6 +1,6 @@
 PELICANOPTS=
 BASEDIR=$(CURDIR)
-OUTPUTDIR=/var/www/BootHack/BootHack
+OUTPUTDIR=/var/www/BootHack
 VENV=$(HOME)/venv/pelican/bin/activate
 THEMES=$(subst bootstrap.,,$(subst .min.css,,$(notdir $(wildcard ./theme/static/css/bootstrap.*.css))))
 
@@ -29,4 +29,14 @@ confs/theme-%.py: theme/static/css/bootstrap.%.min.css
 
 all: clean $(THEMES)
 
-.PHONY: all clean bootstrap
+update-dev-theme:
+	rm -rf theme
+	git clone -b dev git@github.com:magnunleno/BootHack.git theme
+	rm -rf theme/.git*
+
+update-theme:
+	rm -rf theme
+	git clone git@github.com:magnunleno/BootHack.git theme
+	rm -rf theme/.git*
+
+.PHONY: all clean bootstrap update-dev-theme update-theme

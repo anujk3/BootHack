@@ -31,3 +31,6 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 JINJA_EXTENSIONS = ['jinja2.ext.do']
+
+SITELOGO = '/images/boothack-logo.png'
+DISPLAY_CATEGORIES_ON_MENU = False
