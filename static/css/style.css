@@ -275,7 +275,7 @@ article h1 {
 }
 
 /* Others */
-.entry-content a, .entry-content a:hover,
+.entry-content p a, .entry-content p a:hover,
 footer .container a, footer .container a:hover,
 .author-bio a, .author-bio a:hover {
     color: #3498DB;
@@ -335,6 +335,9 @@ footer .container a, footer .container a:hover,
 #site-banner-brand span {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+#social-banner a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
 #site-banner {
     box-shadow:
         0 15px 10px -10px rgba(0, 0, 0, 0.4) inset,
@@ -349,4 +352,61 @@ footer .container a, footer .container a:hover,
     margin-right: auto;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+
+.timeline-wrapper h2 {
+    background: none repeat scroll 0 0 #333332;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+}
+.timeline {
+    background: url("/theme/images/timeline_bg.jpg") repeat-y scroll center top rgba(0, 0, 0, 0);
+    list-style: none outside none;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+.timeline > li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    clear: both;
+    float: left;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+    width: 43.5%;
+}
+.timeline > li:nth-of-type(2n) {
+    float: right;
+    text-align: left;
+}
+.timeline > li > h3 {
+    font-size: 15px;
+}
+.timeline > li > span {
+    display: block;
+}
+.timeline > li > span > a {
+    font-size: 15px;
+}
+.timeline li:nth-of-type(2n):after {
+    left: auto;
+    right: 100%;
+}
+.timeline li:before, .timeline li:after {
+    background: none repeat scroll 0 0 #333333;
+    content: " ";
+    height: 3px;
+    left: 100%;
+    position: absolute;
+    top: 50%;
+    width: 15%;
 }
