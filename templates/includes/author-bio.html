@@ -1,5 +1,5 @@
 <section class="well well-sm author-bio">
-    <a href="{{ author.url }}" title="{{ author }}">
+    <a href="{{ SITEURL }}/{{ author.url }}" title="{{ author }}">
         <img class="pull-left" src="{% if _author.avatar %}{{ SITEURL }}{{ _author.avatar }}{% else %}http://placehold.it/120x120&text={{ author.name }} avatar{% endif %}" alt="{{ author.name }}">
     </a>
     <div class="author-bio-text">
