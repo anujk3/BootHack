@@ -1,6 +1,6 @@
 Alerts
 ######
-:date: 2014-04-26 14:00
+:date: 2014-01-26 14:00
 :category: Alerts
 :tags: alerts, demo, bootstrap
 

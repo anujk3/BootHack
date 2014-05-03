@@ -1,6 +1,6 @@
 Text Alignment
 ##############
-:date: 2014-04-26 18:00
+:date: 2014-03-26 18:00
 :category: Text Alignment
 :tags: alerts, demo, bootstrap
 

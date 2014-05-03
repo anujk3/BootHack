@@ -1,6 +1,6 @@
 Blockquote
 ##########
-:date: 2014-04-26 15:00
+:date: 2014-02-26 15:00
 :category: Blockquote
 :tags: blockquote, demo, bootstrap
 

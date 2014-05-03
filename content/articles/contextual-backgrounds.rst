@@ -1,6 +1,6 @@
 Contextual Backgrounds
 ######################
-:date: 2014-04-26 13:00
+:date: 2014-01-26 13:00
 :category: Backgrounds
 :tags: contextual, backgrounds, demo, bootstrap
 
