@@ -1,5 +1,6 @@
+{% set CONTEXT = 'page' %}
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{% endblock %}
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
 
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
@@ -23,5 +24,8 @@
         <div class="entry-content">
             {{ page.content }}
         </div>
+        {% if page.comments != "closed" %}
+            {% include 'includes/comments.html' %}
+        {% endif %}
     </section>
 {% endblock %}

@@ -1,4 +1,6 @@
+{% set CONTEXT = 'archives' %}
 {% extends "base.html" %}
+{% block title %}Archives - {{ SITENAME }}{% endblock %}
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
     <ol class="breadcrumb">
@@ -8,15 +10,31 @@
     {% endif %}
 {% endblock %}
 
+{#
+    This Archive style is inspired by Daker:
+        https://github.com/daker/blog/blob/master/archives/index.html
+#}
 {% block content %}
-    <section id="content">
-        <h1>Archives for {{ SITENAME }}</h1>
-
-        <dl>
-            {% for article in dates %}
-                <dt>{{ article.locale_date }}</dt>
-                <dd><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></dd>
-            {% endfor %}
-        </dl>
+<section id="content">
+    <section class="timeline-wrapper" id="yier-end">
+        <h2>Now</h2>
     </section>
+    {% for year, year_articles in articles|groupby('date.year')|sort(reverse=True) %}
+    <section class="timeline-wrapper" id="year{{ year }}">
+            <ul class="timeline">
+                {% for month, articles in year_articles|groupby('date.month')|sort(reverse=True) %}
+                <li>
+                    <h3>{{ articles[0].date.strftime("%B") }}</h3>
+                    {% for article in articles %}
+                    <span>
+                        <a href="{{ SITEURL }}/{{ article.url }}" title="">{{ article.title }}</a>
+                    </span>
+                    {% endfor %} {# end of post in article #}
+                </li>
+                {% endfor %} {# end of month, article in archive #}
+            </ul>
+        <h2>{{ year }}</h2>
+        </section>
+    {% endfor %}
+</section>
 {% endblock %}
