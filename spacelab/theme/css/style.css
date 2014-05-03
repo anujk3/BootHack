@@ -1,63 +1,55 @@
 body {
-    padding-top: 120px;
+    padding-top: 70px;
 }
 
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
 
-/* for list-groups nested within a list-group-item, reset the bottom margin */
-.list-group-item > .list-group {
-    margin-bottom: 0px;
-}
-
-/* for list-group-items nested within a list-group-item, reset the bottom
-   padding of the last item, b/c the containing item has paddimg already
- */
-.list-group-item .list-group-item:last-child {
-    padding-bottom: 0px;
-}
-
 .list-group-item {
     border: none;
-    background-color: transparent;
 }
 
-/* Tag cloud */
-.tag-1 {font-size: 18pt;}
-.tag-2 {font-size: 16pt;}
-.tag-3 {font-size: 14pt;}
-.tag-4 {font-size: 12pt;}
-.tag-5 {font-size: 10pt;}
-.tag-6 {font-size: 8pt;}
+.tag-1 {
+    font-size: 13pt;
+}
 
-#sidebar-content {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+.tag-2 {
+    font-size: 10pt;
+}
+
+.tag-2 {
+    font-size: 8pt;
+}
+
+.tag-4 {
+    font-size: 6pt;
+}
+
+#sidebar {
+    padding-top: 0px;
 }
 
 #sidebar a {
     color: inherit;
 }
 
-/* Example for how to control spacing between icon and label in specific
-   lists in the sidebar. To change, override in your CUSTOM_CSS           */
-#sidebar #social i {
-    margin-right: 3px;
+i {
+    margin-right: 10px;
 }
 
-a, a:hover, a:focus {
+a, a:hover {
     color: inherit;
 }
 
 .entry-content a {
     text-decoration: none;
+    border-bottom: 1px dotted;
 }
 
 .entry-content a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid;
 }
 
 .entry-content img {
@@ -65,73 +57,12 @@ a, a:hover, a:focus {
     height: auto;
 }
 
-.figure {
-    border: 1px solid #DDDDDD;
-    border-radius: 4px;
-    display: block;
-    margin-bottom: 20px;
-    padding: 4px;
-    transition: all 0.2s ease-in-out 0s;
+.highlight pre {
+    background-color: #202020;
+    color: #777;
 }
 
-.figure p.caption {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 4px;
-    font-size: 90%;
-    text-align: center;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-}
-
-.figure div.legend {
-    padding: 0px 4px;
-    font-size: small;
-    font-style: italic;
-    text-align: justify;
-}
-
-img.align-right, .figure.align-right {
-    float: right;
-    margin-top: 0em;
-    margin-right: 0em;
-    margin-left: 1em;
-    margin-bottom: 1em;
-}
-
-img.align-left, .figure.align-left {
-    float: left;
-    margin-top: 0em;
-    margin-right: 1em;
-    margin-left: 0em;
-    margin-bottom: 1em;
-}
-
-img.align-center, .figure.align-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.7em;
-    margin-bottom: 1.5em;
-}
-
-.highlighttable pre {
-    /* Removes bootstrap default margin-bottom */
-    margin-bottom: 0px;
-}
-
-.highlighttable {
-    /* Adds them margin-bottom to highlightable instead of <pre> */
-    margin-bottom: 11px;
-}
-
-.highlighttable {
-    width: 100%;
-}
-
-#categories ul, #tags-left ul, #tags-right ul {
+#categories ul, #tags ul {
     list-style: none;
     padding: 0;
     margin-left: 0;
@@ -152,201 +83,4 @@ img.align-center, .figure.align-center {
     color: #AAAAAA;
     font-size: 0.9em;
     margin-right: 10px;
-}
-
-/* Sidebar Tweaks */
-#sidebar-brand {
-    text-align: center;
-}
-
-#sidebar-content-left {
-    text-align: right;
-}
-
-#tags-left {
-    margin-right: 15px;
-}
-
-#tags-right {
-    margin-left: 15px;
-}
-
-.tagcloud li {
-    padding: 0px;
-}
-
-#categories .list-group-item, #links .list-group-item{
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-
-#site-links-side {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-#site-links-side li,
-#article-tags li {
-    padding: 0 0 5px;
-}
-#article-tags ul {
-    margin-bottom: 0px;
-}
-
-/* Custom Text tweaks */
-.strike {
-    text-decoration: line-through;
-}
-
-dd {
-    margin-left: 20px;
-}
-
-tt {
-    background-color: #F9F2F4;
-    border-radius: 4px;
-    color: #C7254E;
-    font-size: 90%;
-    padding: 2px 4px;
-    white-space: nowrap;
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-}
-
-/* Article Styling */
-article {
-    /*border-bottom: 1px solid #EAEAEA;*/
-    margin-bottom: 90px;
-    overflow: hidden;
-}
-
-article h1 {
-    margin-top: 0px;
-}
-
-.page-header {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    border-bottom: none;
-}
-
-.post-info {
-    padding: 0px 15px;
-}
-
-#article-datetime i, #article-author i, #article-comment-count i, #article-category i {
-    margin-right: 5px;
-}
-#article-author i, #article-comment-count i, #article-category i {
-    margin-left: 15px;
-}
-
-#article-tags {
-    display: block;
-}
-
-#more {
-    padding-left: 10px;
-}
-
-#more i {
-    padding-left: 5px;
-    margin-right: 5px;
-}
-
-.author-bio {
-    overflow: hidden;
-}
-
-.author-bio img {
-    margin-right: 10px;
-    width: 120px;
-    max-width: 120px;
-    height: auto;
-}
-
-.author-bio-text p {
-    margin-bottom: 5px;
-}
-
-.author-avatar {
-    width: 180px;
-    max-width: 180px;
-    height: auto;
-}
-
-/* Others */
-.entry-content a, .entry-content a:hover,
-footer .container a, footer .container a:hover,
-.author-bio a, .author-bio a:hover {
-    color: #3498DB;
-}
-
-.social-nav-link {
-    margin-right: 5px;
-}
-
-#all-tags {
-    text-align: justify;
-}
-
-#all-tags li {
-    padding: 0 0 5px;
-}
-
-#tag-search {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding-right: 0px;
-}
-
-.table.docutils {
-    border: 0px;
-
-}
-
-.table.docutils thead tr th, .table.docutils tbody tr td {
-    border-left: 0 none;
-    border-right: 0 none;
-    border-bottom: 0 none;
-}
-
-.figure-summary {
-    margin-right: 20px;
-}
-
-.figure-summary img {
-    width: 150px;
-    height: auto;
-    max-width: 150px;
-}
-
-#twitter-timeline-left {
-    margin-right: 30px;
-}
-#twitter-timeline-right {
-    margin-left: 30px;
-}
-
-.banner-brand {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    max-width: 125px;
-}
-
-#site-banner-brand span {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-#site-banner {
-    box-shadow:
-        0 15px 10px -10px rgba(0, 0, 0, 0.4) inset,
-        0 -15px 10px -10px rgba(0, 0, 0, 0.4) inset
-}
-
-#site-banner-brand {
-    margin-bottom: 50px;
-    text-align: center;
-    max-width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }

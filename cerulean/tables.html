@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-    <title>Tables | BootHack Demo</title>
+    <title>Tables</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -16,20 +14,19 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Tables"/>
             <meta property="og:url" content="/BootHack/cerulean/tables.html"/>
-            <meta property="og:description" content="A Demo showing table feature. Default Table: # First Name Last Name Username 1 Mark Otto @mdo 2 Jacob Thornton @fat 3 Larry the Bird @twitter Striped ..."/>
-            <meta name="description" content="A Demo showing table feature. Default Table: # First Name Last Name Username 1 Mark Otto @mdo 2 Jacob Thornton @fat 3 Larry the Bird @twitter Striped ..."/>
+            <meta property="og:description" content="A Demo showing table feature. Default Table: # First Name Last Name Username 1 Mark Otto @mdo 2 Jacob Thornton @fat 3 Larry the Bird @twitter Striped Table: # First Name Last Name Username 1 Mark Otto @mdo 2 Jacob Thornton @fat 3 Larry the Bird @twitter Hover Table: # First Name Last ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="/BootHack/cerulean/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
     <link href="/BootHack/cerulean/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/BootHack/cerulean/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="/BootHack/cerulean/theme/css/pygments.css" rel="stylesheet">
     <link rel="stylesheet" href="/BootHack/cerulean/theme/css/style.css" type="text/css"/>
 
 
 </head>
-
 <body>
+
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -40,300 +37,23 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="/BootHack/cerulean/" class="navbar-brand">
-BootHack Demo            </a>
+<img src="/BootHack/cerulean//images/boothack-logo.png" width=""/> BootHack Demo            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
             </ul>
-            <p class="navbar-text navbar-right">
-                        <a class="navbar-link social-nav-link" href="#"><i class="fa fa-you can add links in your config file fa-lg"></i></a>
-                        <a class="navbar-link social-nav-link" href="#"><i class="fa fa-another social link fa-lg"></i></a>
-            </p>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/BootHack/cerulean/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
+            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </div> <!-- /.navbar -->
 
-
-<div id="content" class="container">
+<div class="container">
     <div class="row">
+        <div class="col-sm-9">
 
-
-
-    <div class="col-xs-12 col-md-3 " id="sidebar">
-        <aside>
-
-    <section id="sidebar-brand">
-        <div>
-            <a href="/BootHack/cerulean"><img src="/BootHack/cerulean//images/boothack-logo.png" alt="BootHack Demo" class="img-rounded"></a>
-            <a href="/BootHack/cerulean"><h1 class="center-block">BootHack Demo</h1></a>
-        </div>
-        <div id="site-links-side">
-            <ul class="list-group list-inline">
-            </ul>
-        </div>
-
-        <hr />
-    </section>
-
-            <section class="visible-lg visible-md" id="sidebar-content-left">
-                <ul class="list-group list-group-flush">
-
-
-<div>
-    <ul class="nav nav-tabs nav-justified">
-        <li class="active">
-        <a data-toggle="tab" href="#categories" title="Categories">
-            <i class="fa fa-folder-open fa-lg"></i>
-        </a>
-        </li>
-        <li class="">
-        <a data-toggle="tab" href="#tagcloud" title="Tags">
-            <i class="fa fa-tags fa-lg"></i>
-        </a>
-        </li>
-        <li class="">
-        <a data-toggle="tab" href="#recent" title="Recent Articles">
-            <i class="fa fa-clock-o fa-lg"></i>
-        </a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div id="categories" class="tab-pane fade active in">
-<li class="list-group-item">
-    <a href="/BootHack/cerulean/categories">
-        <h4>Categories</h4>
-    </a>
-    <ul class="list-group" id="categories">
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/alerts.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Alerts
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/backgrounds.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Backgrounds
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/blockquote.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Blockquote
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/body-text.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Body Text
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/code.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Code
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/emphasis.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Emphasis
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/headers.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Headers
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/lists.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Lists
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/lorem-ipsum.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Lorem Ipsum
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/tables.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Tables
-            </a>
-        </li>
-        <li class="list-group-item">
-        <a class="with-tooltip" href="/BootHack/cerulean/category/text-alignment.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
-            Text Alignment
-            </a>
-        </li>
-    </ul>
-</li>            </div>
-        <div id="tagcloud" class="tab-pane fade ">
-
-
-
-<li class="list-group-item">
-    <a href="/BootHack/cerulean/tags">
-        <h4>Tags</h4>
-    </a>
-    <ul class="list-group list-inline tagcloud" id="tags-left">
-        <li class="list-group-item tag-3">
-            <a href="/BootHack/cerulean/tag/alerts.html">
-                    alerts
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/amet.html">
-                    amet
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/backgrounds.html">
-                    backgrounds
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/blockquote.html">
-                    blockquote
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/body.html">
-                    body
-            </a>
-        </li>
-        <li class="list-group-item tag-1">
-            <a href="/BootHack/cerulean/tag/bootstrap.html">
-                    bootstrap
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/classes.html">
-                    classes
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/code.html">
-                    code
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/contextual.html">
-                    contextual
-            </a>
-        </li>
-        <li class="list-group-item tag-1">
-            <a href="/BootHack/cerulean/tag/demo.html">
-                    demo
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/dolor.html">
-                    dolor
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/emphasis.html">
-                    emphasis
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/headers.html">
-                    headers
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/ipsum.html">
-                    ipsum
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/lists.html">
-                    lists
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/lorem.html">
-                    lorem
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/sit.html">
-                    sit
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/talbes.html">
-                    talbes
-            </a>
-        </li>
-        <li class="list-group-item tag-4">
-            <a href="/BootHack/cerulean/tag/text.html">
-                    text
-            </a>
-        </li>
-    </ul>
-</li>            </div>
-        <div id="recent" class="tab-pane fade ">
-<li class="list-group-item">
-<h4>Recent Articles</h4>
-    <ul class="list-group" id="recentposts">
-        <li class="list-group-item">
-            <a href="/BootHack/cerulean/headers.html">
-                Headers
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/BootHack/cerulean/body-text-demo.html">
-                Body Text Demo
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/BootHack/cerulean/text-alignment.html">
-                Text Alignment
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/BootHack/cerulean/emphasis-classes.html">
-                Emphasis Classes
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="/BootHack/cerulean/lists.html">
-                Lists
-            </a>
-        </li>
-    </ul>
-</li>        </div>
-    </div>
-</div><li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg pull-right"></i>Links</h4>
-      <ul class="list-group" id="links">
-        <li class="list-group-item">
-            <a href="http://getpelican.com/" target="_blank">
-                Pelican
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://python.org/" target="_blank">
-                Python.org
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://jinja.pocoo.org/" target="_blank">
-                Jinja2
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="#" target="_blank">
-                You can modify those links in your config file
-            </a>
-        </li>
-      </ul>
-    </li>
-                </ul>
-            </section>
-        </aside>
-    </div>
-        <div class="col-xs-12 col-md-8">
-    <ol class="breadcrumb">
-        <li><a href="/BootHack/cerulean" title="BootHack Demo"><i class="fa fa-home fa-lg"></i></a></li>
-        <li><a href="/BootHack/cerulean/category/tables.html" title="Tables">Tables</a></li>
-        <li class="active">Tables</li>
-    </ol>
     <section id="content">
         <article>
             <header class="page-header">
@@ -344,48 +64,27 @@ BootHack Demo            </a>
                         Tables
                     </a>
                 </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
 <footer class="post-info">
-    <span id="article-datetime">
+    <span class="label label-default">Date</span>
+    <span class="published">
         <i class="fa fa-calendar"></i><time datetime="2014-04-26T12:00:00">Sáb 26 abril 2014</time>
     </span>
 
-    <span id="article-author">
-        <a href="/BootHack/cerulean/author/demo.html"><i class="fa fa-user"></i>Demo</a>
-    </span>
-
-    <span id="article-category">
-        <i class="fa fa-folder-open"></i><a href="/BootHack/cerulean/category/tables.html">Tables</a>
-    </span>
 
 
-	<span id="article-tags">
-        <ul class="list-group list-inline">
-            <li class="list-group-item tag-8">
-                <i class="fa fa-tags"></i>
-            </li>
-                <li class="list-group-item tag-8">
-                    <span class="label label-default">
-                    <a href="/BootHack/cerulean/tag/talbes.html">talbes</a>
-                    </span>
-                </li>
-                <li class="list-group-item tag-8">
-                    <span class="label label-default">
-                    <a href="/BootHack/cerulean/tag/demo.html">demo</a>
-                    </span>
-                </li>
-                <li class="list-group-item tag-8">
-                    <span class="label label-default">
-                    <a href="/BootHack/cerulean/tag/bootstrap.html">bootstrap</a>
-                    </span>
-                </li>
-        </ul>
-	</span>
+<span class="label label-default">Tags</span>
+	<a href="/BootHack/cerulean/tag/talbes.html">talbes</a>
+        /
+	<a href="/BootHack/cerulean/tag/demo.html">demo</a>
+        /
+	<a href="/BootHack/cerulean/tag/bootstrap.html">bootstrap</a>
     
-</footer><!-- /.post-info -->            </header>
-            <div class="summary">
-                <p class="lead"></p>
-            </div>
-            <div class="entry-content">
+</footer><!-- /.post-info -->                    </div>
+                </div>
                 <p>A Demo showing table feature.</p>
 <dl class="docutils">
 <dt><strong>Default Table:</strong></dt>
@@ -579,6 +278,143 @@ BootHack Demo            </a>
     </section>
 
         </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="#"><i
+                            class="fa fa-you can add links in your config file-square fa-lg"></i>You can add links in your config file
+                    </a></li>
+                    <li class="list-group-item"><a href="#"><i
+                            class="fa fa-another social link-square fa-lg"></i>Another social link
+                    </a></li>
+
+
+
+                <li class="list-group-item"><a href="/BootHack/cerulean/"><h4><i class="fa fa-tags fa-lg"></i>Tags</h4></a></li>
+                        <li class="list-group-item tag-1">
+                            <a href="/BootHack/cerulean/tag/bootstrap.html">
+                                bootstrap
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-1">
+                            <a href="/BootHack/cerulean/tag/demo.html">
+                                demo
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-3">
+                            <a href="/BootHack/cerulean/tag/alerts.html">
+                                alerts
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/backgrounds.html">
+                                backgrounds
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/lorem.html">
+                                lorem
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/text.html">
+                                text
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/dolor.html">
+                                dolor
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/ipsum.html">
+                                ipsum
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/emphasis.html">
+                                emphasis
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/blockquote.html">
+                                blockquote
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/talbes.html">
+                                talbes
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/sit.html">
+                                sit
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/headers.html">
+                                headers
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/code.html">
+                                code
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/lists.html">
+                                lists
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/body.html">
+                                body
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/amet.html">
+                                amet
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/classes.html">
+                                classes
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/BootHack/cerulean/tag/contextual.html">
+                                contextual
+                            </a>
+                        </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i>Links</h4></li>
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="#" target="_blank">
+                You can modify those links in your config file
+            </a>
+        </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
     </div>
 </div>
 <footer>
@@ -586,7 +422,7 @@ BootHack Demo            </a>
       <hr>
       <div class="row">
          <div class="col-xs-10">&copy; 2014 Demo
-            &middot; Powered by <a href="https://github.com/magnunleno/boothack" target="_blank">BootHack</a>,
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
@@ -600,11 +436,6 @@ BootHack Demo            </a>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="/BootHack/cerulean/theme/js/respond.min.js"></script>
-
-<script type="text/javascript">
-    $('.with-tooltip').tooltip();
-</script>
-
 
 </body>
 </html>
