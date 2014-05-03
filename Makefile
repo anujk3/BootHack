@@ -10,7 +10,7 @@ ifeq ($(DEBUG), 1)
 endif
 
 
-bootstrap:
+bootstrap: update-theme
 	@echo "Building $@"
 	@. $(VENV); pelican $(BASEDIR)/content -o $(OUTPUTDIR)/$@ -s bootstrap_conf.py $(PELICANOPTS)
 
@@ -23,20 +23,15 @@ confs/theme-%.py: theme/static/css/bootstrap.%.min.css
 	@cp confs/template.py $@
 	@sed 's/#THEME-NAME#/$(THEMENAME)/' $@ -i
 
-%: confs/theme-%.py
+%: confs/theme-%.py update-theme
 	@echo "Building $@"
 	@. $(VENV); pelican $(BASEDIR)/content -o $(OUTPUTDIR)/$@ -s confs/theme-$@.py $(PELICANOPTS)
 
-all: clean $(THEMES)
-
-update-dev-theme:
-	rm -rf theme
-	git clone -b dev git@github.com:magnunleno/BootHack.git theme
-	rm -rf theme/.git*
+all: clean update-theme $(THEMES)
 
 update-theme:
-	rm -rf theme
-	git clone git@github.com:magnunleno/BootHack.git theme
-	rm -rf theme/.git*
+	git submodule init
+	git submodule update
+	cd theme; git checkout dev; git pull
 
 .PHONY: all clean bootstrap update-dev-theme update-theme
