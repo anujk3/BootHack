@@ -1,6 +1,4 @@
-{% set CONTEXT = 'archives' %}
 {% extends "base.html" %}
-{% block title %}Archives - {{ SITENAME }}{% endblock %}
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
     <ol class="breadcrumb">
@@ -12,15 +10,13 @@
 
 {% block content %}
     <section id="content">
-        <article>
-            <h1>Archives for {{ SITENAME }}</h1>
+        <h1>Archives for {{ SITENAME }}</h1>
 
-            <dl>
-                {% for article in dates %}
-                    <dt>{{ article.locale_date }}</dt>
-                    <dd><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></dd>
-                {% endfor %}
-            </dl>
-        </article>
+        <dl>
+            {% for article in dates %}
+                <dt>{{ article.locale_date }}</dt>
+                <dd><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></dd>
+            {% endfor %}
+        </dl>
     </section>
 {% endblock %}

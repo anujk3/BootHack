@@ -1,15 +1,21 @@
-{% set CONTEXT = 'article' %}
 {% extends "base.html" %}
-{% block title %}{{ article.title|striptags }} | {{ SITENAME }}{% endblock %}
+{% block title %}{{ article.title|striptags }}{% endblock %}
 
 {% block breadcrumbs %}
-    <ol class="breadcrumb">
-        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-        {% if article.category %}
-        <li><a href="{{ SITEURL }}/{{ article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
+    {% if DISPLAY_BREADCRUMBS %}
+        {% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
+            <ol class="breadcrumb">
+                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="{{ SITEURL }}/{{ article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
+                <li class="active">{{ article.title }}</li>
+            </ol>
+        {% else %}
+            <ol class="breadcrumb">
+                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+                <li class="active">{{ article.title }}</li>
+            </ol>
         {% endif %}
-        <li class="active">{{ article.title }}</li>
-    </ol>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -23,25 +29,19 @@
                         {{ article.title }}
                     </a>
                 </h1>
-                {% include "includes/article_info.html" %}
             </header>
-            <div class="summary">
-                <p class="lead">{{ article.description }}</p>
-            </div>
             <div class="entry-content">
-                {{ article.content|replace("<html>","")|replace("<body>","")|replace("</html>","")|replace("</body>","") }}
+                <div class="panel">
+                    <div class="panel-body">
+                        {% include "includes/article_info.html" %}
+                    </div>
+                </div>
+                {{ article.content }}
             </div>
             <!-- /.entry-content -->
-            {% if AUTHORS is defined and article.author.name in AUTHORS %}
-                {% set _author = AUTHORS[article.author.name] %}
-                {% set author = article.author %}
-                {% include 'includes/author-bio.html' %}
-            {% endif %}
             {% include 'includes/related-posts.html' %}
             {% include 'includes/addthis.html' %}
-            {% if article.comments != "closed" %}
-                {% include 'includes/comments.html' %}
-            {% endif %}
+            {% include 'includes/comments.html' %}
         </article>
     </section>
 

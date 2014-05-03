@@ -1,4 +1,3 @@
-{% set CONTEXT = 'tag' %}
 {% extends "index.html" %}
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
@@ -9,4 +8,4 @@
     </ol>
     {% endif %}
 {% endblock %}
-{% block title %}{{ tag }} - {{ SITENAME }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
