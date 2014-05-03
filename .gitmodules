@@ -1,0 +1,4 @@
+[submodule "theme"]
+	path = theme
+	url = git@github.com:magnunleno/BootHack.git
+	branch = dev
