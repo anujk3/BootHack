@@ -1,9 +1,12 @@
+
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+      xmlns:fb="https://www.facebook.com/2008/fbml"
+      lang="en">
 <head>
-    <title>Code</title>
+    <title>Code | BootHack Demo</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -14,17 +17,25 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Code"/>
             <meta property="og:url" content="/BootHack/journal/code.html"/>
-            <meta property="og:description" content="A Demo showing code features. Inline This is an inline code. Code: This is an inline ``code``. Basic Block Basic code here Code: .. code:: Basic code here Highlighted Block import this def function(arg): pass if __name__ == '__main__': pass Code: .. code-block:: python import this def function(arg): pass if __name__ ..."/>
+            <meta property="og:description" content="A Demo showing code features. Inline This is an inline code. Code: This is an inline ``code``. Basic Block Basic code here Code: .. code:: Basic code ..."/>
+            <meta name="description" content="A Demo showing code features. Inline This is an inline code. Code: This is an inline ``code``. Basic Block Basic code here Code: .. code:: Basic code ..."/>
+            <meta property="article:author" content="Demo">
+            <meta property="article:section" content="Code">
+            <meta property="article:tag" content="code, demo, bootstrap">
+            <meta property="article:published_time" content="2014-04-26T11:00:00">
+            <meta name="keywords" content="code, demo, bootstrap">
+
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="/BootHack/journal/theme/css/bootstrap.journal.min.css" type="text/css"/>
     <link href="/BootHack/journal/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/BootHack/journal/theme/css/pygments.css" rel="stylesheet">
+    <link href="/BootHack/journal/theme/css/pygments/native.css" rel="stylesheet">
     <link rel="stylesheet" href="/BootHack/journal/theme/css/style.css" type="text/css"/>
 
 
 </head>
+
 <body>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -36,24 +47,320 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/BootHack/journal/" class="navbar-brand">
-<img src="/BootHack/journal//images/boothack-logo.png" width=""/> BootHack Demo            </a>
+                <a href="/BootHack/journal/" class="navbar-brand">BootHack Demo</a>
+
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+
+
             </ul>
+
+
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/BootHack/journal/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
+                <li>
+                    <p class="navbar-text">
+                                <a class="navbar-link social-nav-link" href="#"><i class="fa fa-you can add links in your config file fa-lg"></i></a>
+                                <a class="navbar-link social-nav-link" href="#"><i class="fa fa-another social link fa-lg"></i></a>
+                    </p>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </div> <!-- /.navbar -->
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9">
 
+<div id="content" class="container">
+    <div class="row">
+
+
+
+    <div class="col-xs-12 col-md-3 " id="sidebar">
+        <aside>
+
+    <section id="sidebar-brand">
+        <div>
+            <a href="/BootHack/journal"><img src="/BootHack/journal//images/boothack-logo.png" alt="BootHack Demo" class="img-rounded"></a>
+            <a href="/BootHack/journal"><h1 class="center-block">BootHack Demo</h1></a>
+        </div>
+        <div id="site-links-side">
+            <ul class="list-group list-inline">
+            </ul>
+        </div>
+
+            <div id="social-side">
+                <ul class="list-group list-inline">
+                        <li class="list-group-item">
+                            <a href="#"><i class="fa fa-you can add links in your config file fa-lg"></i></a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><i class="fa fa-another social link fa-lg"></i></a>
+                        </li>
+                </ul>
+            </div>
+
+        <hr />
+    </section>
+
+            <section class="visible-lg visible-md" id="sidebar-content-left">
+                <ul class="list-group list-group-flush">
+
+
+<div>
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active">
+        <a data-toggle="tab" href="#categories" title="Categories">
+            <i class="fa fa-folder-open fa-lg"></i>
+        </a>
+        </li>
+        <li class="">
+        <a data-toggle="tab" href="#tagcloud" title="Tags">
+            <i class="fa fa-tags fa-lg"></i>
+        </a>
+        </li>
+        <li class="">
+        <a data-toggle="tab" href="#recent" title="Recent Articles">
+            <i class="fa fa-clock-o fa-lg"></i>
+        </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div id="categories" class="tab-pane fade active in">
+<li class="list-group-item">
+    <a href="/BootHack/journal/categories">
+        <h4>Categories</h4>
+    </a>
+    <ul class="list-group" id="categories">
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/alerts.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Alerts
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/backgrounds.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Backgrounds
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/blockquote.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Blockquote
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/body-text.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Body Text
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/code.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Code
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/emphasis.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Emphasis
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/headers.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Headers
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/lists.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Lists
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/lorem-ipsum.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Lorem Ipsum
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/tables.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Tables
+            </a>
+        </li>
+        <li class="list-group-item">
+        <a class="with-tooltip" href="/BootHack/journal/category/text-alignment.html" data-placement="top" data-toggle="tooltip" data-original-title="1 article(s)">
+            Text Alignment
+            </a>
+        </li>
+    </ul>
+</li>            </div>
+        <div id="tagcloud" class="tab-pane fade ">
+
+
+
+<li class="list-group-item">
+    <a href="/BootHack/journal/tags">
+        <h4>Tags</h4>
+    </a>
+    <ul class="list-group list-inline tagcloud" id="tags-left">
+        <li class="list-group-item tag-3">
+            <a href="/BootHack/journal/tag/alerts.html">
+                    alerts
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/amet.html">
+                    amet
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/backgrounds.html">
+                    backgrounds
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/blockquote.html">
+                    blockquote
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/body.html">
+                    body
+            </a>
+        </li>
+        <li class="list-group-item tag-1">
+            <a href="/BootHack/journal/tag/bootstrap.html">
+                    bootstrap
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/classes.html">
+                    classes
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/code.html">
+                    code
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/contextual.html">
+                    contextual
+            </a>
+        </li>
+        <li class="list-group-item tag-1">
+            <a href="/BootHack/journal/tag/demo.html">
+                    demo
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/dolor.html">
+                    dolor
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/emphasis.html">
+                    emphasis
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/headers.html">
+                    headers
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/ipsum.html">
+                    ipsum
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/lists.html">
+                    lists
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/lorem.html">
+                    lorem
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/sit.html">
+                    sit
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/talbes.html">
+                    talbes
+            </a>
+        </li>
+        <li class="list-group-item tag-4">
+            <a href="/BootHack/journal/tag/text.html">
+                    text
+            </a>
+        </li>
+    </ul>
+</li>            </div>
+        <div id="recent" class="tab-pane fade ">
+<li class="list-group-item">
+<h4>Recent Articles</h4>
+    <ul class="list-group" id="recentposts">
+        <li class="list-group-item">
+            <a href="/BootHack/journal/headers.html">
+                Headers
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="/BootHack/journal/body-text-demo.html">
+                Body Text Demo
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="/BootHack/journal/text-alignment.html">
+                Text Alignment
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="/BootHack/journal/emphasis-classes.html">
+                Emphasis Classes
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="/BootHack/journal/lists.html">
+                Lists
+            </a>
+        </li>
+    </ul>
+</li>        </div>
+    </div>
+</div><li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg pull-right"></i>Links</h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="#" target="_blank">
+                You can modify those links in your config file
+            </a>
+        </li>
+      </ul>
+    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+        <div class="col-xs-12 col-md-8">
+    <ol class="breadcrumb">
+        <li><a href="/BootHack/journal" title="BootHack Demo"><i class="fa fa-home fa-lg"></i></a></li>
+        <li><a href="/BootHack/journal/category/code.html" title="Code">Code</a></li>
+        <li class="active">Code</li>
+    </ol>
     <section id="content">
         <article>
             <header class="page-header">
@@ -64,27 +371,48 @@
                         Code
                     </a>
                 </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
 <footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
+    <span id="article-datetime">
         <i class="fa fa-calendar"></i><time datetime="2014-04-26T11:00:00">Sáb 26 abril 2014</time>
     </span>
 
+    <span id="article-author">
+        <a href="/BootHack/journal/author/demo.html"><i class="fa fa-user"></i>Demo</a>
+    </span>
+
+    <span id="article-category">
+        <i class="fa fa-folder-open"></i><a href="/BootHack/journal/category/code.html">Code</a>
+    </span>
 
 
-<span class="label label-default">Tags</span>
-	<a href="/BootHack/journal/tag/code.html">code</a>
-        /
-	<a href="/BootHack/journal/tag/demo.html">demo</a>
-        /
-	<a href="/BootHack/journal/tag/bootstrap.html">bootstrap</a>
+	<span id="article-tags">
+        <ul class="list-group list-inline">
+            <li class="list-group-item tag-8">
+                <i class="fa fa-tags"></i>
+            </li>
+                <li class="list-group-item tag-8">
+                    <span class="label label-default">
+                    <a href="/BootHack/journal/tag/code.html">code</a>
+                    </span>
+                </li>
+                <li class="list-group-item tag-8">
+                    <span class="label label-default">
+                    <a href="/BootHack/journal/tag/demo.html">demo</a>
+                    </span>
+                </li>
+                <li class="list-group-item tag-8">
+                    <span class="label label-default">
+                    <a href="/BootHack/journal/tag/bootstrap.html">bootstrap</a>
+                    </span>
+                </li>
+        </ul>
+	</span>
     
-</footer><!-- /.post-info -->                    </div>
-                </div>
+</footer><!-- /.post-info -->            </header>
+            <div class="summary">
+                <p class="lead"></p>
+            </div>
+            <div class="entry-content">
                 <p>A Demo showing code features.</p>
 <dl class="docutils">
 <dt><strong>Inline</strong></dt>
@@ -135,143 +463,6 @@ Basic code here
     </section>
 
         </div>
-        <div class="col-sm-3 well well-sm" id="sidebar">
-
-<aside>
-    <section>
-        <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="#"><i
-                            class="fa fa-you can add links in your config file-square fa-lg"></i>You can add links in your config file
-                    </a></li>
-                    <li class="list-group-item"><a href="#"><i
-                            class="fa fa-another social link-square fa-lg"></i>Another social link
-                    </a></li>
-
-
-
-                <li class="list-group-item"><a href="/BootHack/journal/"><h4><i class="fa fa-tags fa-lg"></i>Tags</h4></a></li>
-                        <li class="list-group-item tag-1">
-                            <a href="/BootHack/journal/tag/bootstrap.html">
-                                bootstrap
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-1">
-                            <a href="/BootHack/journal/tag/demo.html">
-                                demo
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-3">
-                            <a href="/BootHack/journal/tag/alerts.html">
-                                alerts
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/body.html">
-                                body
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/lists.html">
-                                lists
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/headers.html">
-                                headers
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/amet.html">
-                                amet
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/sit.html">
-                                sit
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/ipsum.html">
-                                ipsum
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/code.html">
-                                code
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/talbes.html">
-                                talbes
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/dolor.html">
-                                dolor
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/blockquote.html">
-                                blockquote
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/classes.html">
-                                classes
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/contextual.html">
-                                contextual
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/lorem.html">
-                                lorem
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/emphasis.html">
-                                emphasis
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/text.html">
-                                text
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="/BootHack/journal/tag/backgrounds.html">
-                                backgrounds
-                            </a>
-                        </li>
-    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i>Links</h4></li>
-        <li class="list-group-item">
-            <a href="http://getpelican.com/" target="_blank">
-                Pelican
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://python.org/" target="_blank">
-                Python.org
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://jinja.pocoo.org/" target="_blank">
-                Jinja2
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="#" target="_blank">
-                You can modify those links in your config file
-            </a>
-        </li>
-
-        </ul>
-    </section>
-
-</aside>        </div>
     </div>
 </div>
 <footer>
@@ -279,20 +470,25 @@ Basic code here
       <hr>
       <div class="row">
          <div class="col-xs-10">&copy; 2014 Demo
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            &middot; Powered by <a href="https://github.com/magnunleno/boothack" target="_blank">BootHack</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>
    </div>
 </footer>
-<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/BootHack/journal/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="/BootHack/journal/theme/js/respond.min.js"></script>
+
+<script type="text/javascript">
+    $('.with-tooltip').tooltip();
+</script>
+
 
 </body>
 </html>
