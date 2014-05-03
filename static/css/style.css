@@ -410,3 +410,20 @@ footer .container a, footer .container a:hover,
     top: 50%;
     width: 15%;
 }
+
+#site-banner ul {
+    margin-bottom: 5px;
+}
+
+.dropdown-toggle.navbar-brand {
+    height: auto;
+}
+
+.pull-quote{
+    width: 33%;
+    font-size: 18px;
+}
+
+.pull-quote.pull-right{
+    padding-left: 11px;
+}
