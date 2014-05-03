@@ -365,7 +365,7 @@ footer .container a, footer .container a:hover,
     width: 150px;
 }
 .timeline {
-    background: url("/theme/images/timeline_bg.jpg") repeat-y scroll center top rgba(0, 0, 0, 0);
+    background: url("../images/timeline_bg.jpg") repeat-y scroll center top rgba(0, 0, 0, 0);
     list-style: none outside none;
     margin: 0;
     overflow: hidden;
