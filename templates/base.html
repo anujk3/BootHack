@@ -31,6 +31,9 @@
         {% if OPEN_GRAPH_FB_APP_ID %}
             <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
         {% endif %}
+        {% if GPLUS_AUTHOR %}
+            <link rel="author" href="{{ GPLUS_AUTHOR }}" />
+        {% endif %}
         {% if article %}
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="{{ article.title|striptags }}"/>
