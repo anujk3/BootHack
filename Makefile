@@ -1,5 +1,5 @@
 update:
-	rm -rf theme
+	rm -rf theme confs
 	git rm -rf `find . -maxdepth 1 -type d -not -path '.' -not -path './.git'`
 	cp -r /var/www/BootHack/* .
 	git add -A
