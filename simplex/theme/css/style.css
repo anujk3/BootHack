@@ -191,6 +191,7 @@ img.align-center, .figure.align-center {
 }
 #article-tags ul {
     margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 /* Custom Text tweaks */
