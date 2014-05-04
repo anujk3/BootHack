@@ -10,3 +10,7 @@ update-bootswatch:
 		done
 	@rm -rf /tmp/bootswatch
 
+demo:
+	@rm -rf /tmp/boothack-demo
+	@cd /tmp; git clone -b demo git@github.com:magnunleno/BootHack.git boothack-demo
+	@cd /tmp/boothack-demo; make update-theme; make all
