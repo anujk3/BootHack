@@ -420,6 +420,21 @@ footer .container a, footer .container a:hover,
     height: auto;
 }
 
+.carousel-control.related {
+    width: 1%;
+    background-image: none;
+}
+
+.carousel-inner.related {
+    text-align: center;
+}
+
+.carousel-inner img {
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .pull-quote{
     width: 33%;
     font-size: 18px;
